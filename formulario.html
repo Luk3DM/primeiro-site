@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário</title>
+  <style>
+    
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #4ba3b9; 
+    }
+
+    nav li {
+      float: left;
+    }
+
+    nav li a {
+      display: block;
+      color: white; 
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    nav li a:hover {
+      background-color: #4ba3b9; 
+    }
+
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Agenda de Cortes</h1>
+
+  
+  <nav>
+    <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="hobbies.html">Hobbies</a></li>
+        <li><a href="formacao.html">Minha Formação</a></li>
+        <li><a href="formulario.html">Formulário</a></li>
+    </ul>
+  </nav>
+
+  <h1>Agendamento de Corte de Cabelo</h1>
+
+  <form action="processar_formulario.php" method="post">
+   
+    <label for="data">Data:</label>
+    <input type="date" id="data" name="data" required>
+
+    
+    <label for="horario">Horário:</label>
+    <input type="time" id="horario" name="horario" required>
+
+    
+    <label for="sexo">Sexo:</label>
+    <select id="sexo" name="sexo" required>
+      <option value="masculino">Masculino</option>
+      <option value="feminino">Feminino</option>
+      <option value="outro">Outro</option>
+    </select>
+
+    
+    <label for="observacoes">Observações:</label>
+    <textarea id="observacoes" name="observacoes" rows="4"></textarea>
+
+    
+    <input type="submit" value="Agendar Corte">
+  </form>
+
+</body>
+</html>
